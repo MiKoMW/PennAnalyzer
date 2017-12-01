@@ -6,7 +6,7 @@ import java.util.HashMap;
  * Created by Mac on 2017/11/30.
  */
 public class GrammarSet {
-    HashMap<Grammar,Integer> gramCounter;
+    private HashMap<Grammar,Integer> gramCounter;
 
     GrammarSet(){
         this.gramCounter = new HashMap<Grammar,Integer>();

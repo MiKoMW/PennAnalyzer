@@ -7,7 +7,7 @@ import java.util.HashMap;
  */
 public class PRGrammarSet {
 
-    HashMap<Grammar,Double> PRCouunter;
+    private HashMap<Grammar,Double> PRCouunter;
     PRGrammarSet(){
         this.PRCouunter = new HashMap<Grammar,Double>();
     }
