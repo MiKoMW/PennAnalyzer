@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * Created by Mac on 2017/11/20.
+ * @author Songbo
+ * Created by Mac on 2017/11/30.
  */
 public class GrammarSet {
     HashMap<Grammar,Integer> gramCounter;

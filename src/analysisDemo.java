@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
+ * @author Songbo
  * Created by Mac on 2017/11/30.
  */
 public class analysisDemo {
@@ -16,6 +17,7 @@ public class analysisDemo {
         catch(IOException e){
             e.printStackTrace();
         }
+
         PennAnalyzer penn = new PennAnalyzer(input);
         GrammarSet set = penn.getAllGram().toCNF();
         PRGrammarSet prset = set.getPRGram();
