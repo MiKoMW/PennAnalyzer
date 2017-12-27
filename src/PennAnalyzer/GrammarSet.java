@@ -1,13 +1,30 @@
+/*
+ * <summary>Songbo Hu</summary>
+ * <author></author>
+ * <email>s1647079@sms.ed.ac.uk</email>
+ * <create-date>2017/11/30</create-date>
+ */
+package PennAnalyzer;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
+ * A collection of grammars.
+ *
  * @author Songbo
  * Created by Mac on 2017/11/30.
  */
 public class GrammarSet {
+
+    /**
+     * A counter for frequency of grammars.
+     */
     private HashMap<Grammar,Integer> gramCounter;
 
+    /**
+     * Constructor of a grammar set.
+     */
     GrammarSet(){
         this.gramCounter = new HashMap<Grammar,Integer>();
     }
@@ -15,12 +32,19 @@ public class GrammarSet {
         this.gramCounter = gras;
     }
 
+    /**
+     * Add a grammar into the set.
+     * @param gr the added grammar
+     */
     public void addGram(Grammar gr){
-
-        gramCounter.put(gr,gramCounter.getOrDefault(gr,1)+1);
+        gramCounter.put(gr,gramCounter.getOrDefault(gr,0)+1);
     }
 
+    /**
+     * Get the Probabilistic grammar set.
+     */
     public PRGrammarSet getPRGram() {
+
         HashMap<String, Integer> nodeCounter = new HashMap<String,Integer>();
         HashMap<Grammar,Double> prCouunter = new HashMap<Grammar,Double>();
 
@@ -32,12 +56,13 @@ public class GrammarSet {
             prCouunter.put(gr,((double)gramCounter.get(gr)/(double)nodeCounter.get(gr.lhr)));
         }
 
-
         return new PRGrammarSet(prCouunter);
 
     }
 
-
+    /**
+     * Transfer the original grammar into CNF.
+     */
     public GrammarSet toCNF(){
 
         HashMap<Grammar,Integer> tempSet = new HashMap<Grammar,Integer>();
@@ -72,15 +97,19 @@ public class GrammarSet {
                     cnfGram.addRhr(st);
                     tempSet.put(cnfGram,con);
                 }
-
             }
 
         }
-        //this.gramCounter = tempSet;
+
         return new GrammarSet(tempSet);
     }
 
+    /**
+     * Get the output arraylist of string.
+     * @return output arraylist
+     */
     public ArrayList<String> getOutput(){
+
         ArrayList<String> ans = new ArrayList<String>();
 
         for(Grammar gr : gramCounter.keySet()){

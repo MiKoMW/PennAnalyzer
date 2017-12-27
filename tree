@@ -998,25 +998,3 @@
 (TOP (S (NP (NP (CD One)) (PP (IN of) (NP (DT the) (NN juniper) (NNS trees)))) (VP (VBZ is) (VP (VBN enlaced) (PP (IN with) (NP (NP (DT the) (JJ spread-eagled) (NNS bodies)) (PP (IN of) (NP (NP (NNS children)) (, ,) (S (VP (VBG fighting) (PP (IN for) (NP (NP (DT the) (JJS highest) (NNS branches)) (CC and) (NP (NP (DT the) (JJS best) (NN view)) (PP (IN of) (NP (NP (DT the) (NNS dancers)) (ADVP (RB below))))))))))))))) (. .)))
 (TOP (S (NP (NN Someone)) (VP (VBD had) (VP (VBN spray-painted) (, ,) (ADVP (NP (RB about) (DT a) (NN foot)) (RB high)) (, ,) (PP (IN in) (NP (JJ bright) (JJ red))) (: :) (NP (NNP AAAA)) (, ,) (SBAR (IN so) (S (NP (DT the) (NNS letters)) (VP (VBD overlapped)))))) (. .)))
 (TOP (S (SBAR (IN If) (S (NP (DT the) (NNS searches)) (VP (VBP uncover) (NP (JJ similar) (NNS ideas))))) (NP (PRP you)) (VP (MD may) (VP (VP need) (S (VP (TO to) (VP (VB modify) (NP (PRP$ your) (NN invention)) (S (VP (TO to) (VP (VB get) (PP (IN around) (NP (NP (NNS areas)) (SBAR (S (NP (NNS others)) (VP (VBD bagged) (ADVP (RB first))))))))))))))) (. .)))
-
-( (S
-    (NP-SBJ
-      (NP (DT A) (NN licensing) (NN company) )
-      (VP (VBG representing)
-        (NP
-          (NP (DT the) (NNP University) )
-          (PP (IN of)
-            (NP (NNP Pennsylvania) )))))
-    (VP (VBD added)
-      (NP (NNP Johnson) (CC &) (NNP Johnson) )
-      (PP-CLR (TO to)
-        (NP
-          (NP (PRP$ its) (NN lawsuit) )
-          (VP (VBG challenging)
-            (NP (DT a) (NN university) (NN faculty) (NN member) )
-            (PP (IN over)
-              (NP
-                (NP (NNS rights) )
-                (PP (TO to)
-                  (NP (NNP Retin-A) (NN acne) (NN medicine) ))))))))
-    (. .) ))
