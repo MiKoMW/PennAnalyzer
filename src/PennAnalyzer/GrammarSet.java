@@ -6,15 +6,16 @@
  */
 package PennAnalyzer;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 /**
  * A collection of grammars.
  *
  * @author Songbo
  * Created by Mac on 2017/11/30.
  */
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class GrammarSet {
 
     /**

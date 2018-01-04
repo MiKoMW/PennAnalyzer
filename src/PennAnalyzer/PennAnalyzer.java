@@ -16,13 +16,15 @@ import java.util.StringTokenizer;
  * Created by Mac on 2017/11/30.
  */
 
-public class PennAnalyzer {
+public class PennAnalyzer{
 
     /**
      * Grammar set.
      */
     ArrayList<Grammar> grams;
     GrammarSet gramSet;
+    ArrayList<PosPair> poss;
+    PosSet posSet;
 
     /**
      * Input files.
@@ -36,6 +38,7 @@ public class PennAnalyzer {
     public PennAnalyzer(ArrayList<String> in){
         grams = new ArrayList<Grammar>();
         gramSet = new GrammarSet();
+        this.posSet = new PosSet();
         this.input = in;
         formatInput();
         normalize();
@@ -60,6 +63,9 @@ public class PennAnalyzer {
         this.input = formatInput;
     }
 
+    /**
+     * Counting the number of difference between '(' and ')'.
+     */
     public int countDiff(String st){
 
         int ans = 0;
@@ -155,7 +161,7 @@ public class PennAnalyzer {
     }
 
     /**
-     * Couting all grammars.
+     * Counting all grammars.
      * @param gras  grammar list
      */
     public void countGrammar(ArrayList<Grammar>  gras){
@@ -163,5 +169,42 @@ public class PennAnalyzer {
             this.gramSet.addGram(st);
         }
     }
+
+    /**
+     * Derived the pos pairs from a string acting like a tree tokenizer.
+     * @return pos lists
+     */
+    public ArrayList<PosPair> getPos(String st){
+        ArrayList<PosPair> ans = new ArrayList<PosPair>();
+        String[] temp = st.split("[()]");
+        for(String sts : temp){
+            if(sts.matches("[^ ]+ [^ ]+")) {
+                ans.add(new PosPair(sts));
+            }
+        }
+        return ans;
+    }
+
+    /**
+     * Counting all poss.
+     * @param pp  pos list
+     */
+    public void countPos(ArrayList<PosPair> pp){
+        for(PosPair p: pp){
+            this.posSet.add(p);
+        }
+    }
+
+    /**
+     * Get all poss.
+     * @return pos set
+     */
+    public PosSet getAllPos(){
+        for(String st:input){
+            countPos(getPos(st));
+        }
+        return this.posSet;
+    }
+
 
 }
