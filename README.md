@@ -2,7 +2,6 @@
 
 A JAVA tool to analysis a penn style tree bank.
 
-These codes convert a penn Style treebank to PCFG. 
-For demo, please see pcfgDemo.
+These codes convert a penn Style treebank to PCFG and retrieve the pos of word form the tree bank. 
 
-More functional will be added in the future.
+For demo, please see pcfgDemo and posDemo.
